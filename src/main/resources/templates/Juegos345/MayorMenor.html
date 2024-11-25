@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayor o Menor</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        .dynapuff {
+            font-family: "DynaPuff", system-ui;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .iframe-container {
+            position: relative;
+            width: 80%; /* Ancho del contenedor */
+            height: 0;
+            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+<div class="bg-blue-500 p-4 flex justify-between items-center">
+    <div class="text-white text-2xl sm:text-3xl font-bold dynapuff">
+        Math4All
+    </div>
+    <div class="flex items-center space-x-2 sm:space-x-4">
+        <a th:href="@{/usuarios/inicio}" class="bg-white text-black dynapuff py-2 px-3 sm:px-4 border-2 border-green-800 rounded-full">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <a th:href="@{/usuarios/login}" class="bg-red-500 text-white dynapuff py-2 px-3 sm:px-4 border-2 border-black rounded-full">
+            <i class="fas fa-sign-out-alt mr-2"></i>
+            Log out
+        </a>
+    </div>
+</div>
+
+<div class="flex justify-center items-center mt-4">
+    <div class="iframe-container">
+        <iframe src="https://www.lofgames.com/games/count_and_compare/count_and_compare.html" title="Página Incrustada"></iframe>
+    </div>
+</div>
+</body>
+</html>

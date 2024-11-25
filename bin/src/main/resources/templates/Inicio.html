@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Mathematics4All</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        .dynapuff {
+            font-family: "DynaPuff", system-ui;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+<div class="bg-blue-500 p-4 flex justify-between items-center">
+    <div class="text-white text-2xl sm:text-3xl font-bold dynapuff">
+        Math4All
+    </div>
+    <div class="flex items-center space-x-2 sm:space-x-4">
+        <a th:href="@{/usuarios/registro}" class="bg-white text-black dynapuff py-2 px-3 sm:px-4 border-4 border-pink-500 rounded-full">
+            Registro
+        </a>
+        <a th:href="@{/usuarios/login}" class="bg-white text-black dynapuff py-2 px-3 sm:px-4 border-4 border-green-500 rounded-full">
+            Login
+        </a>
+    </div>
+</div>
+
+<div class="max-w-screen-xl mx-auto p-8">
+    <h1 class="text-4xl font-bold text-orange-400 mb-4">Bienvenido de nuevo, <span th:text="${usuario.nombre}">Usuario</span>!</h1>
+    <p class="text-lg text-gray-700 mb-4">
+        Estamos encantados de tenerte de vuelta en Mathematics4All.
+    </p>
+</div>
+
+<footer class="bg-blue-500 p-4 text-center text-white mt-8">
+    <p>&copy; 2024 Mathematics4All. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio-Mathematics4All</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        .dynapuff {
+            font-family: "DynaPuff", system-ui;
+        }
+    </style>
+</head>
+<body class="bg-white">
+<div class="bg-blue-500 p-4 flex justify-between items-center">
+    <div class="text-white text-2xl sm:text-3xl font-bold dynapuff">
+        Math4All
+    </div>
+    <div class="flex items-center space-x-2 sm:space-x-4">
+        <a th:href="@{/usuarios/login}" class="bg-red-500 text-white dynapuff py-2 px-3 sm:px-4 border-2 border-black rounded-full">
+            <i class="fas fa-sign-out-alt mr-2"></i>
+            Log out
+        </a>
+    </div>
+</div>
+
+<div class="max-w-screen-xl items-center mx-auto p-8">
+    <h1 class="text-4xl text-center dynapuff font-semibold text-orange-400 mb-2 ">Bienvenido/a de nuevo <span th:text="${usuario.nombre}"></span></h1>
+    <p class="text-3x dynapuff text-center text-gray-700 mb-4">
+        ¡Ahora puedes explorar todos los recursos que tenemos para ti!
+    </p>
+    <h2 class="text-3xl  dynapuff mb-4">Juegos</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+        <!-- Card de Juego 1 -->
+        <div class="bg-green-300 rounded-lg shadow-lg p-4">
+            <h3 class="text-xl font-semibold">Rompecabezas</h3>
+            <p class="mt-2">Resuelve este rompecabezas en el orden numerico correcto para completar la imagen.</p>
+            <a th:href="@{/juegos/rompecabezas}" class="mt-4 inline-block bg-blue-500 text-white dynapuff  py-2 px-4 rounded-full">Jugar</a>
+        </div>
+        <!-- Card de Juego 2 -->
+        <div class="bg-blue-200 rounded-lg shadow-lg p-4">
+            <h3 class="text-xl font-semibold">Mayor, Menor o Igual</h3>
+            <p class="mt-2">Compara dos imagenes y decide si uno es mayor, menor o igual que otro.</p>
+            <a th:href="@{/juegos/mayor-menor}" class="mt-4 inline-block bg-blue-500 text-white dynapuff  py-2 px-4 rounded-full">Jugar</a>
+        </div>
+        <!-- Card de Juego 3 -->
+        <div class="bg-pink-300 rounded-lg shadow-lg p-4">
+            <h3 class="text-xl font-semibold">Estimación Visual</h3>
+            <p class="mt-2">Observa la imagen y responde las preguntas sobre la cantidad de ciertos elementos.</p>
+            <a th:href="@{/juegos/encontrar}" class="mt-4 inline-block bg-blue-500 text-white dynapuff  py-2 px-4 rounded-full">Jugar</a>
+        </div>
+        <!-- Card de Juego 4 -->
+        <div class="bg-yellow-200 rounded-lg shadow-lg p-4">
+            <h3 class="text-xl font-semibold">Descubrir la imagen</h3>
+            <p class="mt-2">Revela la imagen oculta resolviendo sumas.</p>
+            <a th:href="@{/juegos/sumas-imagen}" class="mt-4 inline-block bg-blue-500 text-white dynapuff  py-2 px-4 rounded-full">Jugar</a>
+        </div>
+        <!-- Card de Juego 5 -->
+        <div class="bg-orange-300 rounded-lg shadow-lg p-4">
+            <h3 class="text-xl font-semibold">Cálculos Rápidos</h3>
+            <p class="mt-2">Resuelve operaciones matemáticas básicas en el menor tiempo posible.</p>
+            <a th:href="@{/juegos/calculo-mental}" class="mt-4 inline-block bg-blue-500 text-white dynapuff  py-2 px-4 rounded-full">Jugar</a>
+        </div>
+    </div>
+
+    <h2 class="text-3xl dynapuff mb-4">Videos</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <!-- Card de Video 1 -->
+        <div class="bg-blue-300 rounded-lg shadow-lg p-4">
+            <h3 class="text-xl font-semibold">Los Primeros Números</h3>
+            <p class="mt-2">Aprende sobre los números básicos y su reconocimiento.</p>
+            <a th:href="@{/videos/video2}" class="mt-4 inline-block bg-blue-500 text-white dynapuff  py-2 px-4 rounded-full">Ver Video</a>
+        </div>
+        <!-- Card de Video 2 -->
+        <div class="bg-green-300 rounded-lg shadow-lg p-4">
+            <h3 class="text-xl font-semibold">Ordenar Números</h3>
+            <p class="mt-2"> Conoce como ordenar números en secuencia ascendente y descendente.</p>
+            <a th:href="@{/videos/video3}" class="mt-4 inline-block bg-blue-500 text-white dynapuff  py-2 px-4 rounded-full">Ver Video</a>
+        </div>
+        <!-- Card de Video 3 -->
+        <div class="bg-yellow-200 rounded-lg shadow-lg p-4">
+            <h3 class="text-xl font-semibold">Mayor que, Menor que e Igual</h3>
+            <p class="mt-2">Descubre cómo comparar números utilizando los signos de mayor, menor e igual</p>
+            <a th:href="@{/videos/video1}" class="mt-4 inline-block bg-blue-500 text-white dynapuff  py-2 px-4 rounded-full">Ver Video</a>
+        </div>
+        <!-- Card de Video 4 -->
+        <div class="bg-purple-300 rounded-lg shadow-lg p-4">
+            <h3 class="text-xl font-semibold">Aprender a Sumar</h3>
+            <p class="mt-2">Entérate de cómo sumar de manera efectiva con este video educativo</p>
+            <a th:href="@{/Videos/Video4}" class="mt-4 inline-block bg-blue-500 text-white dynapuff  py-2 px-4 rounded-full">Ver Video</a>
+        </div>
+        <!-- Card de Video 5 -->
+        <div class="bg-red-300 rounded-lg shadow-lg p-4">
+            <h3 class="text-xl font-semibold">Aprender a Restar</h3>
+            <p class="mt-2">Descubre el proceso para restar y mejora tus habilidades matemáticas.</p>
+            <a th:href="@{/videos/video7}" class="mt-4 inline-block bg-blue-500 text-white dynapuff  py-2 px-4 rounded-full">Ver Video</a>
+        </div>
+        <!-- Card de Video 6 -->
+        <div class="bg-cyan-300 rounded-lg shadow-lg p-4">
+            <h3 class="text-xl font-semibold">Aprender a Multiplicar</h3>
+            <p class="mt-2">Aprende técnicas para multiplicar números de manera sencilla y rápida.</p>
+            <a th:href="@{/videos/video5}" class="mt-4 inline-block bg-blue-500 text-white dynapuff  py-2 px-4 rounded-full">Ver Video</a>
+        </div>
+        <!-- Card de Video 7 -->
+        <div class="bg-orange-300 rounded-lg shadow-lg p-4">
+            <h3 class="text-xl font-semibold">Aprender a Dividir</h3>
+            <p class="mt-2">Conoce los pasos para dividir números y resolver problemas de división con facilidad.</p>
+            <a th:href="@{/videos/video6}" class="mt-4 inline-block bg-blue-500 text-white dynapuff  py-2 px-4 rounded-full">Ver Video</a>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-blue-500 p-4 text-center text-white mt-8">
+    <p>&copy; 2024 Mathematics4All. Todos los derechos reservados.</p>
+</footer>
+
+
+</body>
+</html>
+
+

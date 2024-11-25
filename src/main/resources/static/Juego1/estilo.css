@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    text-align: center;
+}
+
+#image {
+    width: 800px;
+    height: auto;
+    border: 2px solid #000;
+    margin-bottom: 20px;
+}
+
+#input-container {
+    margin-bottom: 20px;
+}
+
+#question {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#guess {
+    width: 60px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+#submit-button {
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+#result {
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+}

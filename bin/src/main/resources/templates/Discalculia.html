@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discalculia - Mathematics4All</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        .dynapuff {
+            font-family: "DynaPuff", system-ui;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+<div class="bg-blue-500 p-4 flex justify-between items-center">
+    <div class="text-white text-2xl sm:text-3xl font-bold dynapuff">
+        Math4All
+    </div>
+    <div class="flex items-center space-x-2 sm:space-x-4">
+        <a th:href="@{/usuarios/registro}" class="bg-white text-black dynapuff py-2 px-3 sm:px-4 border-4 border-pink-500 rounded-full">
+            Registro
+        </a>
+        <a th:href="@{/usuarios/login}" class="bg-white text-black dynapuff py-2 px-3 sm:px-4 border-4 border-green-500 rounded-full">
+            Login
+        </a>
+    </div>
+</div>
+
+<div class="max-w-screen-xl mx-auto p-8">
+    <nav class="mb-6">
+        <a th:href="@{/usuarios}" class="text-blue-500">Inicio</a> / <span class="text-gray-500">¿Qué es la Discalculia?</span>
+    </nav>
+
+    <div class="bg-white p-8 rounded-lg shadow-md">
+        <h1 class="text-4xl font-bold text-orange-400 mb-4">Discalculia</h1>
+        <p class="text-lg text-gray-700 mb-4">
+            La discalculia se define como un trastorno del aprendizaje en el que se observa una capacidad aritmética sustancialmente por debajo de lo esperado según la edad cronológica, el cociente intelectual y el nivel de escolaridad, donde tales dificultades interfieren significativamente en el rendimiento académico.
+        </p>
+        <h2 class="text-2xl font-bold text-gray-700 mb-2">Señales comunes de la discalculia incluyen dificultad para:</h2>
+        <ul class="list-disc list-inside text-gray-700 mb-4">
+            <li>Entender el significado de cantidades o conceptos como mayor que y menor que.</li>
+            <li>Recordar datos matemáticos, como las tablas de multiplicar.</li>
+            <li>Contar dinero o calcular el cambio.</li>
+            <li>Estimar el tiempo.</li>
+            <li>Estimar la velocidad o la distancia.</li>
+            <li>Entender la lógica de las matemáticas.</li>
+            <li>Retener los números en la mente al resolver problemas.</li>
+        </ul>
+        <div class="flex">
+            <div class="w-full md:w-1/2 mr-4">
+                <img src="https://www.universidadviu.com/sites/universidadviu.com/files/images/iStock_000041048748_Medium-1024x682.jpg" alt="Imagen relacionada con la discalculia" class="rounded-lg">
+            </div>
+            <div class="bg-gray-100 p-4 rounded-lg shadow-md w-full md:w-1/2">
+                <h3 class="text-lg font-bold text-gray-700">Referencias:</h3>
+                <ul class="list-disc list-inside text-gray-700">
+                    <li>de Understood, E. E. (2020). <a class="text-blue-500" href="https://www.understood.org/es-mx/articles/what-is-dyscalculia">Qué es la discalculia</a>. Understood. https://www.understood.org/es-mx/articles/what-is-dyscalculia.</li>
+                    <li>Cim. (2022). <a class="text-blue-500" href="https://cim-psicologia.com/la-discalculia">La discalculia - CIM Centro de Psicología Badalona.</a> https://cim-psicologia.com/la-discalculia</li>
+                    <li>Benedicto-López, P., & Rodríguez-Cuadrado, S. (2019). <a href="https://doi.org/10.7203/relieve.25.1.10125" class="text-blue-500">Discalculia: manifestaciones clínicas, evaluación y diagnóstico</a>. Perspectivas actuales de intervención educativa. RELIEVE - Revista Electrónica De Investigación Y Evaluación Educativa, 25(1). https://doi.org/10.7203/relieve.25.1.10125</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-blue-500 p-4 text-center text-white mt-8">
+    <p>&copy; 2024 Mathematics4All. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
+
